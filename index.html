@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Weather Widget</title>
+        <link rel="stylesheet" href="res/css/styles.css">
+    </head>
+
+    <body>
+        <div class="widget-container" id="weather-widget-1">
+            <div class="widget" id="flip">
+                <div class="widget-content front" >
+                    <div class="widget-icon"></div>
+                    <div class="widget-text">
+                        <h2 class="widget-name">Regensburg</h2>
+                        <h3 class="widget-description">10.5°C broken clouds</h3>
+                        <h4 class="widget-caption">Click anywhere on the widget to change city</h4>
+                    </div>
+                </div>
+                <div class="widget-content back">
+                  <div class="widget-icon" id ="widget-icon"></div>
+                    <input class="widget-input" type="text" />
+                   <div class="widget-text">
+                    <h3 class="widget-description">Press Enter to submit</h3>
+                    <h4 class="widget-caption">... or Esc to cancel</h4>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="libs/jquery-2.0.3.min.js"></script>
+        <script src="src/WeatherWidget.js"></script>
+        <script src="src/WeatherView.js"></script>
+        <script src="src/WeatherModel.js"></script>
+        <script src="src/WeatherViewController.js"></script>
+        <script>
+            WeatherWidget.init();
+        </script>
+    </body>
+</html>
